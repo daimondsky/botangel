@@ -5,7 +5,7 @@ import time
 from flask import Flask, request
 
 # Завантажуємо токен з оточення.
-API_TOKEN = os.environ.get('API_TOKEN = 8226961817:AAEi12lXfX9WOheDUJDriZ9eiBm6mGq-_SU')
+API_TOKEN = os.environ.get('API_TOKEN')
 if not API_TOKEN:
     raise ValueError("Не знайдено API_TOKEN! Перевірте змінні середовища.")
 
@@ -587,6 +587,7 @@ def webhook():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+
 
 
 
