@@ -214,13 +214,13 @@ TIPS = [
 @bot.message_handler(commands=['start'])
 def start_message(message):
     bot.send_photo(message.chat.id, WELCOME_IMAGE_URL, caption="Привіт, світла душа! 🌸")
-    bot.send_message(message.chat.id, "Хочеш підказку? Напиши: /tip")
+    bot.send_message(message.chat.id, "Хочеш підказку? Напиши: /TAK")
 
-# Команда /tip
+# Команда /TAK
 @bot.message_handler(commands=['tip'])
-def send_tip(message):
-    tip = random.choice(TIPS)
-    bot.send_message(message.chat.id, tip)
+def send_TAK(message):
+    TAK = random.choice(TIPS)
+    bot.send_message(message.chat.id, TAK)
 
 # Flask-роут для перевірки
 @app.route('/')
@@ -234,5 +234,6 @@ def run_bot():
 if __name__ == "__main__":
     threading.Thread(target=run_bot).start()
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
 
 
