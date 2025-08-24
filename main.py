@@ -556,7 +556,7 @@ def send_daily_tip(message):
     if user_id in user_timestamps and (current_time - user_timestamps[user_id]) < 300:
         bot.send_message(
             message.chat.id,
-            "Не спіши, зверни увагу на підказку, яка була видана, та повертайся за 5 хвилин 😉"
+            "Не поспішай 🙏 Будь ласка зверни увагу на підказку вище 🧘🏼‍♀️ повертайся за 5 хвилин ✨"
         )
         return
 
@@ -587,4 +587,5 @@ def webhook():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+
 
