@@ -248,13 +248,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Надсилання привітального повідомлення
     await update.message.reply_text(
-        "Вітаю, світла душа!
-        
-        Я твій янгол-охоронець у цифровому світі. Я можу поділитись з тобою духовними порадами і підказками.
-        
-        Натисни кнопку нижче і я дам тобі мудру пораду від янголів наставників.
-        
-        Більше духовного контенту @daimondsky ",
+        "Вітаю, світла душа! ",
         reply_markup=markup
     )
     logger.info(f"Користувач {update.effective_user.id} почав розмову.")
@@ -311,3 +305,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
